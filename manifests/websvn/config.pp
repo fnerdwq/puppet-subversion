@@ -21,7 +21,7 @@ class subversion::websvn::config {
   file { $parentpath:
     ensure  => directory,
     recurse => true,
-    owner   => 'root',
+    owner   => $subversion::websvn::params::www_owner,
     group   => $subversion::websvn::params::www_group,
     mode    => '0640',
   }
